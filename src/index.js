@@ -26,5 +26,19 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (array === undefined || array.length === 0) {
+
+    return 0;
+  } else {
+    let arr = array;
+    let sum = 0;
+
+    arr.forEach((item) => {
+      sum = sum + item;
+    })
+
+    let averageValue = sum / arr.length;
+    
+    return averageValue;
+  }
 }

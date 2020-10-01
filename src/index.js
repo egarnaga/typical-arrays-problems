@@ -13,7 +13,16 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (array === undefined || array.length === 0) {
+
+    return 0;
+  } else {
+    let arr = array;
+    arr.sort((a, b) => a - b);
+    let maximalValue = arr[arr.length - 1];
+    
+    return maximalValue;
+  }
 }
 
 exports.avg = function avg (array) {
